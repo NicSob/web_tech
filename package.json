@@ -1,0 +1,27 @@
+{
+  "name": "webtech-lab127",
+  "version": "1.0.0",
+  "description": "Mikołaj Sobczyk, Mikołaj Magiera",
+  "main": "script.js",
+  "dependencies": {
+    "express": "^4.18.2",
+    "mypackage": "^0.1.0",
+    "sqlite3": "^5.1.4",
+    "underscore": "^1.13.6"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NicSob/webtech-lab127.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NicSob/webtech-lab127/issues"
+  },
+  "homepage": "https://github.com/NicSob/webtech-lab127#readme"
+}
