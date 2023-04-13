@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+
+
+
+<html lang="en">
+
+   <head>
+      <meta charset="UTF-8">
+      <title>Documentation A3 - lab127</title>
+   </head>
+
+
+<body>
+
+
+
+    <h1>API Documentation - lab127</h1>
+    <h2>Retrieve the <b>full </b> data set</h2>
+    <p>endpoint URI: /author</p>
+    <p>MIME format: application/json</p>
+    <p>HTTP method: <em>GET</em></p>
+    <h3>Example Input:</h3>
+    <pre> GET /author</pre>
+    <h4>Example Output:</h4>
+    <pre>
+HTTP/1.1 200 OK
+Content-Type: appliccation/json
+[
+    {
+        "id": 1,
+        "author": "Tim Berners-Lee",
+        "alt": "Image of Berners-Lee",
+        "tags": "html,http,url,cern,mit",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/9/9d/Sir_Tim_Berners-Lee.jpg",
+        "description": "The internet and the Web aren't the same thing."
+    },
+    {
+        "id": 2,
+        "author": "Edyta Gorniak",
+        "alt": "Image of Edycia",
+        "tags": "kocica,url,girl,wman",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Edyta_G%C3%B3rniak.jpg/320px-Edyta_G%C3%B3rniak.jpg",
+        "description": "The girl"
+    }
+]
+    </pre>
+
+    <h1>CRUD (Create, Retrieve, Update and Delete) interface</h1>
+    <h2>Add data for a new photo item - (Create)</h2>
+    <p>endpoint URI: /author</p>
+    <p>MIME format: application/json</p>
+    <p>HTTP method: <em>POST</em></p>
+    <h3>Example Input:</h3>
+    <pre> POST /author
+        {
+        "author": "Isaan Newton",
+        "alt": "Image of Isaac",
+        "tags": "smart,math,physics",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Sir_Isaac_Newton_by_Sir_Godfrey_Kneller%2C_Bt.jpg/396px-Sir_Isaac_Newton_by_Sir_Godfrey_Kneller%2C_Bt.jpg",
+        "description": "The smart guy."
+    }
+    </pre>
+    <h3>Example Output:</h3>
+    <pre>
+201 Created
+HTTP/1.1 200 OK
+Content-Type: appliccation/json
+[
+    {
+        "id": 1,
+        "author": "Tim Berners-Lee",
+        "alt": "Image of Berners-Lee",
+        "tags": "html,http,url,cern,mit",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/9/9d/Sir_Tim_Berners-Lee.jpg",
+        "description": "The internet and the Web aren't the same thing."
+    },
+    {
+        "id": 2,
+        "author": "Edyta Gorniak",
+        "alt": "Image of Edycia",
+        "tags": "kocica,url,girl,wman",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Edyta_G%C3%B3rniak.jpg/320px-Edyta_G%C3%B3rniak.jpg",
+        "description": "The girl"
+    },
+    {
+        "id": 3,
+        "author": "Isaan Newton",
+        "alt": "Image of Isaac",
+        "tags": "smart,math,physics",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Sir_Isaac_Newton_by_Sir_Godfrey_Kneller%2C_Bt.jpg/396px-Sir_Isaac_Newton_by_Sir_Godfrey_Kneller%2C_Bt.jpg",
+        "description": "The smart guy."
+    }
+]
+    </pre>
+
+
+    
+    <h2>To list the data of a specific item - (Retrieve)</h2>
+    <p>endpoint URI: /author/:id</p>
+    <p>MIME format: application/json</p>
+    <p>HTTP method: <em>GET</em></p>
+    <h3>Example Input:</h3>
+    <pre> GET /author/1 </pre>
+    <h3>Example Output:</h3>
+    <pre>
+        Status: OK
+        {
+            "id": 1,
+            "author": "Tim Berners-Lee",
+            "alt": "Image of Berners-Lee",
+            "tags": "html,http,url,cern,mit",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/9/9d/Sir_Tim_Berners-Lee.jpg",
+            "description": "The internet and the Web aren't the same thing."
+        }
+    </pre>
+
+
+
+    <h2>To change data of a specific item - (Update)</h2>
+    <p>endpoint URI: /author/:id</p>
+    <p>MIME format: application/json</p>
+    <p>HTTP method: <em>PUT</em></p>
+    <h3>Example Input:</h3>
+    <pre> PUT /author/3
+        {
+            "author": "Isaac Newton"   
+        }
+    </pre>
+    <h3>Example Output:</h3>
+    <pre>
+        204 No Content
+        Status: OK
+        Row(s) updated: 1
+       
+    </pre>
+
+
+    
+    <h2>To remove data of a specific item - (Delete)</h2>
+    <p>endpoint URI: /author/:id</p>
+    <p>MIME format: application/json</p>
+    <p>HTTP method: <em>DELETE</em></p>
+    <h3>Example Input:</h3>
+    <pre> DELETE /author/3</pre>
+    <h3>Example Output:</h3>
+    <pre>
+    204 No Content
+    201 No Content
+    Status: OK
+    </pre>
+
+
+
+
+
+
+
+
+</body>
+
+
+
+</html>
