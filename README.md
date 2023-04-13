@@ -26,11 +26,11 @@ Please refer to the [API Documentation](documentation.html) for details on how t
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/your-username/your-repo.git
+git clone https://github.com/NicSob/web_tech.git
 ```
 Navigate to the project directory:
 ```bash
-cd your-repo
+cd web_tech
 ```
 Install the dependencies:
 ```bash
